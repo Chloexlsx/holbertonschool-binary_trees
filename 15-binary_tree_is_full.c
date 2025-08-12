@@ -17,7 +17,8 @@ int binary_tree_is_full(const binary_tree_t *tree)
 	/*1 child: not full*/
 	if (tree->left == NULL || tree->right == NULL)
 		return (0);
-	/*two child*/
+	/*no need to check two child, because */
+	/*if it comes back with 1, it means full*/
 	return (binary_tree_is_full(tree->left)
 && binary_tree_is_full(tree->right));
 }
