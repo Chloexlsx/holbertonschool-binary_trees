@@ -35,7 +35,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 	if (tree->left == NULL && tree->right == NULL)
 		return (1);
 	/*check if one child*/
-	if (tree->left != NULL || tree->right != NULL)
+	if (tree->left == NULL || tree->right ==  NULL)
 		return (0);
 	/*check if the height is the same*/
 	h_left = height_edges(tree->left);
